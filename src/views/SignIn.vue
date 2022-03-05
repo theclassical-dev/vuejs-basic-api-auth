@@ -37,7 +37,11 @@ export default {
       SignIn: 'auth/SignIn'
     }),
     onSubmit() {
-      this.SignIn(this.form)
+      this.SignIn(this.form).then(() => {
+        this.$router.replace({
+          name: 'dashboard'
+        })
+      })
     }
   }
 }
