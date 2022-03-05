@@ -8,4 +8,6 @@ require('@/store/subscriber')
 
 axios.defaults.baseURL = 'http://127.0.0.1:8000/api'
 
+store.dispatch('auth/attempt', localStorage.getItem('token'))
+
 createApp(App).use(store).use(router).mount('#app')
