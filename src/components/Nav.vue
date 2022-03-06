@@ -3,6 +3,9 @@
        <li>
            <router-link to="/">Home</router-link>
        </li>
+       <li>
+            <router-link to="/test">test</router-link>
+        </li>
        <template v-if="authenticated">
             <li>
                 {{ user.name }} {{ user.email }}
