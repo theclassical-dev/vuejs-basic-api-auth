@@ -11,11 +11,15 @@ import { mapGetters, mapActions  } from "vuex"
 export default {
     name: 'Test',
     methods: {
-    ...mapActions(["fetchTest"])
+    ...mapActions({
+        mainFetch: "main/fetchTest"
+        })
     },
-    computed: mapGetters(["allTest"]),
+    computed: mapGetters({
+        allTest: 'main/allTest'
+        }),
     created() {
-        this.fetchTest();
+        this.mainFetch();
     },
 }
 </script>
